@@ -28,10 +28,10 @@ https://github.com/mcre/mcre-tools
 
 https://tools.mcre.info/ja
 
-![](/images/mcre-tools-summary//website01.webp)
+![](/images/mcre-tools-summary/website01.webp)
 *トップページ*
 
-![](/images/mcre-tools-summary//website02.webp)
+![](/images/mcre-tools-summary/website02.webp)
 *熟語パズル*
 
 今あるツールは「熟語パズル」のみです。よくある「和同開珎」パズルを解いてくれるアプリです。今後ツールは追加していく予定です。
@@ -57,7 +57,7 @@ OGPもこんな感じで自動生成されます。
 
 ## バックエンド
 
-![](/images/mcre-tools-summary//architecture.webp)
+![](/images/mcre-tools-summary/architecture.webp)
 *[cdk-dia](https://github.com/pistazie/cdk-dia)で自動生成したアーキテクチャ図*
 
 AWSを使用しています。自動生成したものをそのまま貼っているのであまり見やすくないですが図のような感じです。
@@ -107,7 +107,7 @@ VueでSSG/SSRを実現するのであればまず選択肢に上がるのがNuxt
 
 なお、AWSコストは実際にかなり安いです。**約1ヵ月あたりなんと0.05ドル！(8円くらい)**
 
-![](/images/mcre-tools-summary//aws-cost.webp)
+![](/images/mcre-tools-summary/aws-cost.webp)
 *10月1日〜23日*
 
 検討時に参考にしたサイトなど
