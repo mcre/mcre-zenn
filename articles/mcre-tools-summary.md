@@ -3,7 +3,7 @@ title: "Vue3 + AWSでフルスタック開発 - コード全公開"
 emoji: "🧑‍💻"
 type: "tech"
 topics: ["vue3", "AWS", "個人開発", "ogp", "cdk"]
-published: true
+published: false
 ---
 
 # はじめに
