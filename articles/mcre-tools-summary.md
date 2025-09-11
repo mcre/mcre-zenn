@@ -6,7 +6,7 @@ topics: ["vue3", "AWS", "個人開発", "ogp", "cdk"]
 published: true
 ---
 
-# はじめに
+## はじめに
 
 Vue3でWebアプリを開発しました。
 SPAながら、OGPやSSGに対応し、SEO的にも悪くないはずです。バックエンドはAWS CDKで構築しています。
@@ -15,14 +15,14 @@ SPAながら、OGPやSSGに対応し、SEO的にも悪くないはずです。�
 
 https://github.com/mcre/mcre-tools
 
-## 用語
+### 用語
 
 - SPA (Single Page Application): VueのデフォルトだけどSEO的にちょっと使いづらいやつ。
 - OGP (Open Graph Protocol): XなどでURLを貼ると画像が表示されるやつ
 - SSG (Static Site Generation): ビルド時にHTMLが生成されるやつ。素のVueだとコンテンツを埋め込んでくれないので、これをやるとSEO的に良いはず。
 - AWS CDK: AWSインフラをコードで管理するやつ
 
-# どんなWebアプリか
+## どんなWebアプリか
 
 本質的なところでないのでさらっと流しますが、いまのところこんなサイトです。
 
@@ -40,9 +40,9 @@ https://tools.mcre.info/ja/jukugo?t=%E5%92%8C&r=%E9%96%8B&b=%E7%8F%8E&l=%E9%8A%8
 
 OGPもこんな感じで自動生成されます。
 
-# 技術スタック
+## 技術スタック
 
-## フロントエンド
+### フロントエンド
 
 主な使用パッケージなど
 
@@ -55,7 +55,7 @@ OGPもこんな感じで自動生成されます。
 - [aspida](https://github.com/aspida/aspida) / [openapi2aspida](https://github.com/aspida/openapi2aspida)
   - OpenAPI定義からAPI呼び出しのためのTypeScriptの型を作ってくれるライブラリ
 
-## バックエンド
+### バックエンド
 
 ![cdk-diaで自動生成したアーキテクチャ図](/images/mcre-tools-summary/architecture.webp)
 *[cdk-dia](https://github.com/pistazie/cdk-dia)で自動生成したアーキテクチャ図*
@@ -82,7 +82,7 @@ AWSを使用しています。自動生成したものをそのまま貼って�
 図の左が東京リージョンで右はバージニア北部リージョン(us-east-1)です。
 Lambda@EdgeとCloudFrontの証明書をバージニア北部リージョンに置かなければいけないためリージョンを分けましたが、全部をバージニア北部においたほうが楽だったかもしれません。CDKでリージョンをまたいだリソース名を相互に参照するのは出来なくはないのですが結構手間でした。
 
-## CI/CD
+### CI/CD
 
 - AWS CDK
   - 上記バックエンドのほぼすべてをコードで管理し、デプロイできます。
@@ -91,7 +91,7 @@ Lambda@EdgeとCloudFrontの証明書をバージニア北部リージョンに�
   - 単体テスト、e2eテスト、CDKのデプロイ、Lambda関数のアップデート、Vue3プロジェクトのビルド・デプロイを実行します。
   - mainブランチが更新されるごとに自動実行されます。
 
-# 雑感
+## 雑感
 
 開発時に迷ったこととして大きいところでいえば、なぜ[Nuxt](https://nuxt.com/)を使わなかったかということです。
 VueでSSG/SSRを実現するのであればまず選択肢に上がるのがNuxtです。
@@ -114,22 +114,3 @@ VueでSSG/SSRを実現するのであればまず選択肢に上がるのがNuxt
 
 https://ja.vuejs.org/guide/scaling-up/ssr
 https://www.reddit.com/r/vuejs/comments/1e4gwwf/vue3_vs_nuxt3/?rdt=45028
-
-# 今後の記事
-
-このWebアプリをつくるにあたって試行錯誤したことがいろいろあってまだまだ書き足りないので、今後も別の記事としてしていろいろ書いていきたいと思います。
-
-たとえばこんなネタがあります。
-
-- 熟語パズルの作り方やライセンスについて
-- CDKやGithub Actionsについて
-- DynamoDBの使い方について
-- Vite SSGの所感
-- i18n対応について
-- OGPの実現について
-- APIやaspidaについて
-- テスト(Vitest, Playwright)
-
-いずれにしてもソースコードにはすでに試行錯誤の結果が載っているので、興味あるかたは見てみてください。
-
-https://github.com/mcre/mcre-tools
