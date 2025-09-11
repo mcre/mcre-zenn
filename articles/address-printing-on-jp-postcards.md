@@ -69,7 +69,7 @@ https://github.com/mcre/address-printing-on-jp-postcards/blob/master/templates/p
 4. PDFビューアーを使って郵便はがきにプリントアウトしてください。
    * 位置がずれる場合は[テンプレートファイル](https://github.com/mcre/address-printing-on-jp-postcards/blob/master/templates/page/default.tex)の数値を調整してみてください。
 
-```
+``` sh
 docker run -it --rm -v $(pwd):/workdir --rm texlive-python sh -c "python3 main.py config/{configファイル名}.json"
 ```
 
